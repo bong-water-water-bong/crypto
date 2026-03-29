@@ -31,19 +31,14 @@ he's not flashy. he's not greedy. he skims fractions off price gaps across excha
 
 ```
 crypto (agent)
-    │
-    ├── monitor ──→ exchange APIs (read-only price feeds)
-    │   ├── exchange A: $XX,XXX.XX
-    │   ├── exchange B: $XX,XXX.XX
-    │   └── exchange C: $XX,XXX.XX
-    │
-    ├── detect  ──→ spread > fees + slippage + minimum profit?
-    │
-    ├── execute ──→ buy on cheap exchange, sell on expensive exchange
-    │
-    ├── verify  ──→ confirm both sides settled
-    │
-    └── log     ──→ local only, encrypted, never phoned home
+  - monitor   exchange APIs (read-only price feeds)
+                exchange A: $XX,XXX.XX
+                exchange B: $XX,XXX.XX
+                exchange C: $XX,XXX.XX
+  - detect    spread > fees + slippage + minimum profit?
+  - execute   buy on cheap exchange, sell on expensive exchange
+  - verify    confirm both sides settled
+  - log       local only, encrypted, never phoned home
 ```
 
 ## rules
